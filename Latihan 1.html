@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            width: 700px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+        }
+
+        #satu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: end;
+        }
+
+        #dua {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: end;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            color: black;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: aqua;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 kolom tombol */
+            gap: 10px; /* Jarak antar tombol */
+        }
+
+        .button-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.2);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Formulir Data Diri</h2>
+        <form>
+            <fieldset>
+                <Label for="Username">Nama Lengkap</Label>
+                <input type="text" name="Username" id="Username" placeholder="Isi Nama">
+                
+                <div id="satu">
+                    <div>
+                        <label for="Tempat-lahir">Tempat Lahir</label>
+                        <input type="text" name="Tempat-lahir" id="Tempat-lahir" placeholder="Isi Tempat lahir">
+                    </div>
+                    <div>
+                        <label for="Tanggal-lahir">Tanggal Lahir</label>
+                        <input type="date" name="Tanggal-lahir" id="Tanggal-lahir">
+                    </div>
+                </div>
+
+                <div id="dua">
+                    <div>
+                        <label for="Alamat">Alamat</label>
+                        <textarea id="Alamat" name="Alamat" rows="10" placeholder="Alamat anda" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="Kota">Kota</label>
+                            <select name="Kota" id="Kota" required>
+                                <option value="">Silahkan Pilih</option>
+                                <option value="Banjarmasin">Banjarmasin</option>        
+                                <option value="Surabaya">Surabaya</option>        
+                                <option value="Jakarta">Jakarta</option>        
+                                <option value="Subang">Subang</option>        
+                                <option value="Bandung">Bandung</option>        
+                                <option value="Purwakarta">Purwakarta</option>        
+                            </select>
+
+                        <label for="Negara">Negara</label>
+                        <select name="Negara" id="Negara" required>
+                                <option value="">Silahkan Pilih</option>
+                                <option value="Indonesia">Indonesia</option>        
+                                <option value="Singapura">Singapura</option>        
+                                <option value="Malaysia">Malaysia</option>        
+                                <option value="Brunei">Brunei Darussalam</option>        
+                                <option value="Laos">Laos</option>        
+                                <option value="Vietnam">Vietnam</option>        
+                                <option value="Filipina">Filipina</option>        
+                            </select>
+
+                        <label for="Pos">Kode Pos</label>
+                        <input type="text" name="Pos" id="Pos" placeholder="Kode Pos anda"></input>
+                    </div>
+                </div>
+                
+                <label for="Nomber">Nomber Hp</label>
+                <input type="text" name="Nomber" id="Nomber" value="08"></input>
+                
+                <label for="Email">Email</label>
+                <input type="email" name="Email" id="Email" placeholder="Email anda"></input>
+                
+                <label for="Tinggi">Tinggi Badan</label>
+                <input type="text" name="Tinggi" id="Tinggi" placeholder="Tinggi badan anda">
+                
+                <label for="Berat">Berat Badan</label>
+                <input type="text" name="Berat" id="Berat" placeholder="Berat badan anda">
+                
+                <div class="button-group">
+                    <button type="submit">Simpan</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
