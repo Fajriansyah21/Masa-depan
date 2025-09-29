@@ -7,4 +7,7 @@ besok pagi
 -Ulangi lagi
 
 Besok malem
-BOBOKK
+
+acumalaka
+
+ahahahhahahahahahahahaa
