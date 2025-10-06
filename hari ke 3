@@ -1,0 +1,188 @@
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/LP3I-7/Desktop/Acumalaka/.git/
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git add index.html
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git add about.html
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git commit -m "Buat file baru index dan about"
+[main (root-commit) 63222dc] Buat file baru index dan about
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git add about.html
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git commit -m "Buat file baru index dan about"
+[main 71b3c20] Buat file baru index dan about
+ 1 file changed, 11 insertions(+)
+ create mode 100644 about.html
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        genshin.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git add genshin.jpg
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   genshin.jpg
+
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git log
+commit 71b3c20d21db2cb180d70d65d3a1676d979450eb (HEAD -> main)
+Author: Nerf <fajriansyahpratama2103@gmail.com>
+Date:   Mon Oct 6 15:43:15 2025 +0700
+
+    Buat file baru index dan about
+
+commit 63222dcd21b33f3bae328a6db69397453f94cf78
+Author: Nerf <fajriansyahpratama2103@gmail.com>
+Date:   Mon Oct 6 15:42:10 2025 +0700
+
+    Buat file baru index dan about
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git add .
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   FAQ.html
+        new file:   genshin.jpg
+
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git commit -m "Tambah file FAQ"
+[main d36a25e] Tambah file FAQ
+ 2 files changed, 11 insertions(+)
+ create mode 100644 FAQ.html
+ create mode 100644 genshin.jpg
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git log
+commit d36a25efa7be0b660bd3c500f71eca6521c0c924 (HEAD -> main)
+Author: Nerf <fajriansyahpratama2103@gmail.com>
+Date:   Mon Oct 6 15:48:41 2025 +0700
+
+    Tambah file FAQ
+
+commit 71b3c20d21db2cb180d70d65d3a1676d979450eb
+Author: Nerf <fajriansyahpratama2103@gmail.com>
+Date:   Mon Oct 6 15:43:15 2025 +0700
+
+    Buat file baru index dan about
+
+commit 63222dcd21b33f3bae328a6db69397453f94cf78
+Author: Nerf <fajriansyahpratama2103@gmail.com>
+Date:   Mon Oct 6 15:42:10 2025 +0700
+
+    Buat file baru index dan about
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote add origin https://github.com/Fajriansyah21/Masa-depan.git
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote -v
+origin  https://github.com/Fajriansyah21/Masa-depan.git (fetch)
+origin  https://github.com/Fajriansyah21/Masa-depan.git (push)
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+remote: Permission to Fajriansyah21/Masa-depan.git denied to R24-sh.
+fatal: unable to access 'https://github.com/Fajriansyah21/Masa-depan.git/': The requested URL returned error: 403
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git config --global user.email "fajriansyahpratama2103@gmail.com"
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git config --global user.name "Nerf"
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+remote: Permission to Fajriansyah21/Masa-depan.git denied to R24-sh.
+fatal: unable to access 'https://github.com/Fajriansyah21/Masa-depan.git/': The requested URL returned error: 403
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+To https://github.com/Fajriansyah21/Masa-depan.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Fajriansyah21/Masa-depan.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+To https://github.com/Fajriansyah21/Masa-depan.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Fajriansyah21/Masa-depan.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote add origin https://github.com/Fajriansyah21/acumalaka.git
+error: remote origin already exists.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+To https://github.com/Fajriansyah21/Masa-depan.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Fajriansyah21/Masa-depan.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote add origin https://github.com/Fajriansyah21/acumalaka.git
+error: remote origin already exists.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git push -u origin main
+To https://github.com/Fajriansyah21/Masa-depan.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Fajriansyah21/Masa-depan.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote add origin https://github.com/Fajriansyah21/acumalaka.git
+error: remote origin already exists.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$ git remote add origin https://github.com/Fajriansyah21/acumalaka.git
+error: remote origin already exists.
+
+LP3I-7@LP3I_7 MINGW64 ~/Desktop/Acumalaka (main)
+$
